@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Subscripts, superscripts, emphasis and strong tags -->
+    <p>
+      <sub>ipsum dolor sit amet consectetur</sub>
+      <sup>sequi neque</sup>
+
+      <em>doloribus accusamus ratione error perspiciati</em>
+
+      <strong>consequunturadipisci quam obcaecati praesentium</strong>
+
+      sequi, veritatis, totam voluptatem facere quis incidunt illum voluptatibus
+      a odit, tenetur quidem modi ducimus iusto magnam.
+    </p>
+
+    <!-- Special characters:https://www.rapidtables.com/web/html/html-codes.html -->
+    <h1>Copyright &copy;</h1>
+
+    <!-- Unordered lists -->
+    <ul>
+      <li>Homer</li>
+      <li>buddy</li>
+      <li>john</li>
+    </ul>
+
+    <!-- Nested Unordered lists -->
+    <ul>
+      <li>John</li>
+      <li>
+        John
+        <ol>
+          <li>html</li>
+          <li>css</li>
+        </ol>
+      </li>
+      <li><a href="#">peter</a></li>
+    </ul>
+
+    <!-- Ordered lists -->
+    <ol>
+      <li>sara</li>
+      <li>jojo</li>
+      <li>bob</li>
+    </ol>
+
+    <!-- Table -->
+    <table>
+      <tr>
+        <th>info1</th>
+        <th>info2</th>
+        <th>info3</th>
+      </tr>
+      <tr>
+        <td>john</td>
+        <td>peter</td>
+        <td>sara</td>
+      </tr>
+    </table>
+    <br />
+
+    <!-- Simple form, where you will need backend languages like php and js to handle the form submissions so all inputs submitted here won't go anywhere unless a backend language is used.
+    
+    The two form attributes action and method(http method) will make sense after you learn php and javascript
+
+    The HTML <input> name Attribute is used to specify a name for an <input> element. It is used to reference the form-data after submitting the form or to reference the element in a JavaScript.
+
+    There are two ways to create the submit button,
+    one is by using the input tag with submit type or using button tag with type submit-->
+
+    <form action="" method="">
+      <input type="text" name="name" id="" />
+      <br />
+      <!-- <button type="submit">Submit</button> -->
+
+      <br />
+      <br />
+
+      <!-- The id attribute is used to give labels to each input which displays before the field and when you click on the label, the field is highlighted. We are not limited to using label for inputs, we can also use a simple paragraph tag, or use no tag at all and just plain text.
+    Labels are also used in javascript. 
+    
+    A placeholder is used just to give a general idea of what the user has to input.
+
+    The value attribute is used to pre write(hard code) something in the text field, which is different from placeholders because they can be edited like normal text while placeholders dissappear once you start typing in the field. -->
+
+      <label for="uname">Username</label>
+      <input type="text" name="uname" id="uname" />
+      <br />
+      Password
+      <input type="password" placeholder="password" />
+      <br />
+      Email
+      <input type="email" name="" id="" value="email@mail.com" />
+
+      <br />
+      <br />
+
+      <!-- textarea and radio input-->
+
+      <label for="uname">Username</label>
+      <input type="text" name="uname" id="uname" />
+      <br />
+      Password
+      <input type="password" placeholder="password" />
+      <br />
+      Email
+      <input type="email" name="" id="" value="email@mail.com" />
+      <br />
+      <p>Description</p>
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+      <br />
+      <!-- names should match with radio buttons
+        values should also match with the option -->
+      <p>Please select your favourite coding language.</p>
+      <input type="radio" name="coding" id="" value="Javascript" />Javascript
+      <input type="radio" name="coding" id="" value="Java" />Java
+      <input type="radio" name="coding" id="" value="Python" />Python
+      <br />
+
+      <br />
+
+      <!-- Checkboxes, the difference between radio and checkboxes is that you can choose multiple options, you can also set an option to be checked by default by using the 'checked' attribute. -->
+
+      <p>Please select your favourite coding language.</p>
+      <input type="checkbox" name="code" id="" value="Javascript" /> Javascript
+      <input type="checkbox" name="code" id="" value="Java" />Java
+      <input type="checkbox" name="code" id="" value="Python" />Python
+      <br />
+
+      <br />
+
+      <!-- Select/Drop down menu -->
+
+      <p>Please select your favourite coding language.</p>
+      <select name="languages" id="">
+        <option value="Javascript">Javascript</option>
+        <option value="Java">Java</option>
+        <option value="Python">Python</option>
+      </select>
+      <br />
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <!-- Final note: Each submit input submits the info from the whole form which it is present in. -->
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <script>
+      window.onSpotifyWebPlaybackSDKReady = () => {
+        const userAccessToken = "[access token]";
+        const webPlayback = new Spotify.Player({
+          name: "Spotify Web Playback SDK",
+          getOAuthToken: (callback) => {
+            callback(token);
+          },
+        });
+        webPlayback.connect();
+      };
+    </script>
+  </body>
+</html>
